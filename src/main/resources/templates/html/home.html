@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-custom {
+            background-color: #8A0707;
+        }
+        .nav-link, .navbar-brand {
+            color: white !important;
+        }
+        .section {
+            padding: 50px 0;
+            background-color: #f8f9fa;
+        }
+        .section h2 {
+            color: #8A0707;
+            margin-bottom: 30px;
+        }
+        .step {
+            margin-bottom: 30px;
+        }
+        .step img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+        .step h3 {
+            color: #8A0707;
+            margin-top: 10px;
+        }
+        .step p {
+            color: #555;
+        }
+        /* Sticky Footer */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            min-height: 100%;
+        }
+        #main {
+            overflow: auto;
+            padding-bottom: 100px; /* must be same height as the footer */
+        }
+        #footer {
+            position: relative;
+            margin-top: -100px; /* negative value of footer height */
+            height: 100px;
+            clear: both;
+            background-color: #8A0707;
+            color: white;
+            padding: 20px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Blood Donation</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/appointments/list">Appointments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/donateurs/list">Donors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/centres/list">Donation Centers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+                <div>
+                    <a class="nav-link" href="/appointments/add">New Appointment</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="main" class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+                <h1>WELCOME TO BLOOD DONATION</h1>
+                <p>Welcome to our blood donation site. We are dedicated to saving lives by collecting blood donations.</p>
+                <p>Blood donation is crucial to helping people in need, whether for accidents, surgeries, or serious illnesses.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="/images/sang.jpg" width="360px" alt="Blood Donation" class="img-fluid"/>
+            </div>
+        </div>
+
+        <h2 class="text-center mt-5">Three Steps to Donate Blood</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="step">
+                    <img src="/images/bilanSante.jpg" alt="Health Check">
+                    <h3>Health Check</h3>
+                    <p>Undergo a health check to ensure eligibility for blood donation.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="step">
+                    <img src="/images/donnerSang.jpg" alt="Donate Blood">
+                    <h3>Donate Blood</h3>
+                    <p>Donate blood and save lives. Your contribution makes a difference.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="step">
+                    <img src="/images/relax.jpg" alt="Rest and Refresh">
+                    <h3>Rest and Refresh</h3>
+                    <p>After donating, rest for a while and refresh yourself with snacks and drinks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="footer" class="text-center">
+    <p>&copy; 2024 Blood Donation. Tous droits réservés.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+

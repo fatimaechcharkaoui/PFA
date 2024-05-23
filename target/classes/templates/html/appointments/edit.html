@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Modifier un rendez-vous</title>
+</head>
+<body>
+<h1>Modifier un rendez-vous</h1>
+<form action="#" th:action="@{/appointments/edit/{id}(id=${appointment.id})}" th:object="${appointment}" method="post">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+
+    <label for="date">Date :</label>
+    <input type="date" id="date" name="date" th:field="*{date}" required><br>
+
+    <label for="heure">Heure :</label>
+    <input type="time" id="heure" name="heure" th:field="*{heure}" required><br>
+
+    <label for="donateur">Donateur :</label>
+    <select id="donateur" name="donateur.id" th:field="*{donateur.id}" required>
+        <option th:each="donateur : ${donateurs}" th:value="${donateur.id}" th:text="${donateur.nom}"></option>
+    </select><br>
+
+    <label for="center">Centre de don :</label>
+    <select id="center" name="center.id" th:field="*{center.id}" required>
+        <option th:each="center : ${centers}" th:value="${center.id}" th:text="${center.name}"></option>
+    </select><br>
+
+    <button type="submit">Enregistrer</button>
+</form>
+<a href="/appointments/list">Annuler</a>
+</body>
+</html>

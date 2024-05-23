@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Supprimer un rendez-vous</title>
+</head>
+<body>
+<h1>Confirmer la suppression du rendez-vous</h1>
+<p>Êtes-vous sûr de vouloir supprimer ce rendez-vous ?</p>
+<form action="#" th:action="@{/appointments/delete/{id}(id=${appointment.id})}" method="post">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+    <button type="submit">Oui, supprimer</button>
+    <a href="/appointments/list">Annuler</a>
+</form>
+</body>
+</html>

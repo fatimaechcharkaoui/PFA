@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des rendez-vous - Blood Donation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-custom {
+            background-color: #8A0707;
+        }
+        .nav-link, .navbar-brand {
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Blood Donation</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/appointments/list">Appointments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/donateurs/list">Donors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/centres/list">Donation Centers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+            <div>
+                <a class="nav-link" href="/appointments/add">New Appointment</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container my-5">
+    <h2>Liste des rendez-vous</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Date</th>
+            <th scope="col">Heure</th>
+            <th scope="col">Donateur</th>
+            <th scope="col">Centre de don</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Les rendez-vous seront affichés ici -->
+        <tr th:each="appointment : ${appointments}">
+            <td th:text="${appointment.id}"></td>
+            <td th:text="${appointment.date}"></td>
+            <td th:text="${appointment.heure}"></td>
+            <td th:text="${appointment.donateur.nom} + ' ' + ${appointment.donateur.prenom}"></td>
+            <td th:text="${appointment.center.name}"></td>
+            <td>
+                <a th:href="@{/appointments/edit/{id}(id=${appointment.id})}" class="btn btn-primary"><i class="fas fa-edit"></i>Modifier</a>
+                <a th:href="@{/appointments/delete/{id}(id=${appointment.id})}" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Supprimer</a>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+/* Réinitialisation des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles pour l'en-tête */
+.main-header {
+    background-color: #2980b9; /* Couleur de fond de l'en-tête */
+    color: #fff; /* Couleur du texte dans l'en-tête */
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 150px; /* Ajustez la taille du logo selon vos besoins */
+}
+
+.main-nav ul {
+    list-style-type: none;
+}
+
+.main-nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Couleur du texte des liens de navigation */
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.user-actions {
+    /* Styles pour les actions des utilisateurs, comme le bouton de connexion */
+}

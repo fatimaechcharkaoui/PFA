@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Supprimer un Donateur</title>
+</head>
+<body>
+<h1>Confirmer la suppression</h1>
+<p>Êtes-vous sûr de vouloir supprimer ce donateur ?</p>
+<form method="post" th:action="@{/donateurs/delete/{id}(id=${donateur.id})}">
+    <input type="submit" value="Oui, supprimer" />
+</form>
+<a href="/donateurs/list">Annuler</a>
+</body>
+</html>
